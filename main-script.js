@@ -145,12 +145,19 @@ let toggleOrders = true; // You can set the default state
 let toggleDeliveries = true; // You can set the default state
 let showDeliveriesOfflineMessage = false;
 
+document.addEventListener('DOMContentLoaded', function () {
+  var toggleOrdersInput = document.getElementById('toggleOrdersInput');
+
+  toggleOrdersInput.addEventListener('change', function () {
+      toggleOrderStatus();
+  });
+});
+
 function toggleOrderStatus() {
-  if (toggleOrders) {
-    // Logic to turn ON orders
-  } else {
-    // Logic to turn OFF orders
-  }
+  var toggleOrdersInput = document.getElementById('toggleOrdersInput'); 
+  console.log("Checkbox state: " + toggleOrdersInput.checked);
+  toggleOrders = toggleOrdersInput.checked;
+  document.getElementById("vendor-status-text-main").hidden = toggleOrders;
 }
 
 function toggleDeliveryStatus() {
