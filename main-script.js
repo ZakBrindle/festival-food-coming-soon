@@ -1,4 +1,7 @@
 
+function openPDF() {
+  window.open('./assets/Elevate the Beatherder Experience with festival-food.pdf');
+}
 
 class Order {
     constructor(vendorID, number, time, total, description) {
