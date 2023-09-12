@@ -1,40 +1,50 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Festival Food</title>
-  <!-- Link to your stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-</head>
-<!-- Image -->
-<img src="https://i.imgur.com/TaXRGim.png" alt="Festival Food" id="app-image" style="max-width: 850px; width:100%; height: auto; display: block; margin: auto;">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Festival Food - Login</title>
+        <!-- Link to your stylesheet -->
+        <link rel="stylesheet" href="styles.css">
+      </head>
+<body>
 
-<!-- SELECT ADDRESS - ONLY SHOWN WHEN DELIVERY IS ACTIVE -->
-<!-- Use inline style 'display: none;' to hide the div initially -->
-<div id="select-address-container">
-  
-  <div id="glamping-or-cards-container">
-  
-    <!-- Buttons with background images -->
-    <button id="glamping-btn" class="option-button" style="background-image: url(./assets/glamping.jpg);">
-      Glamping
-    </button>
+    <img src="https://i.imgur.com/TaXRGim.png" alt="Festival Food" id="app-image" style="max-width: 1000px; width:100%; height: auto; display: block; margin: auto;">
+    <h1 class="centered-text">Login</h1>
 
-    <button id="cards-btn" class="option-button" style="background-image: url(./assets/playing-cards.jpg);">
-      Camping
-    </button>
+    <br>
+    <!-- <button (click)="logIn()" class="login-button">Login</button> -->
 
-  </div>
-  <br> <br> <br>
+    <div class="login-container">
 
- <p style="text-align: center;" class="main-text">WEBSITE COMING SOON<br></p>
-       <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+        <br>
 
- 
-</div><!-- END OF SELECT ADDRESS - ONLY SHOWN WHEN DELIVERY IS ACTIVE -->
+        <button id="guest-login-button" class="guest-login-button">Order as guest</button>  <br>
+        <p class="deliveryLoginMessage">Order food as a guest or login below.</p> <br>
+        <hr width="80%"><br>
+        <label class="login-input-title" for="username">Email Address</label>    <br> <br>
+        <input 
+        type="email" id="username"  
+        placeholder="Enter your email..."
+        [(ngModel)]="email" />
+        <label class="login-input-title" for="password">Password</label> <br> <br>
+        <input 
+        type="password"
+        placeholder="Enter your password.."/><br>
+        <br>
+        <button id="loginBtn" class="delivery-login-button" type="submit">Login</button>
+        <br> <br> <br>
+        <a style="font-size: 18px;" class="login-page-blue-link" routerLink="/create-account">Don't have an account? Create one</a>
+        <br><br>
+        <a style="font-size: 18px;" class="login-page-blue-link" routerLink="/forgot-password">Forgot your password? Click here</a>
+
+    </div>
 
 
 
+    <br><br> <br> <br> <br> <br> <br> <br>
 
-<div  style="text-align: center;" id="onlyAtBH">   
-  <p style="text-align: center;" class="main-text">Only available at</p><br>
-  <img style="text-align: center;" src="https://i.imgur.com/u8N7oFu.png" alt="Beatherder" id="bh-image">
-</div> <br> <br> 
+    <!-- Link to script.js -->
+    <script src="login-script.js"></script>
+    
+</body>
+</html>
