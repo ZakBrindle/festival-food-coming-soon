@@ -5,7 +5,7 @@ function openPDF() {
 
 function createEmail() {
   var email = "contact@festival-food.co.uk";
-  var subject = "Contact Us from festival-food.co.uk: ";
+  var subject = "I'm reaching out from festival-food.co.uk - Lets talk!";
 
   // Construct the email URL
   var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject);
