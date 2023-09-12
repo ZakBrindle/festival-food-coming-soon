@@ -86,7 +86,7 @@
 .vendor-status-text-main {  
   margin-top:-20px;
   text-align: center;
-  font-size: 18px;
+  font-size: small;
   color: rgba(151, 0, 0, 0.89);
 }
 
@@ -95,7 +95,7 @@
   text-align: left;
   margin-top:-20px;
   margin-left:-20px;
-  font-size: 16px;
+  font-size: small;
   color: rgba(17, 17, 17, 0.945);
 }
 

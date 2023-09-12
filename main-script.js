@@ -3,6 +3,17 @@ function openPDF() {
   window.open('./assets/Elevate the Beatherder Experience with festival-food.pdf');
 }
 
+function createEmail() {
+  var email = "contact@festival-food.co.uk";
+  var subject = "Contact Us from festival-food.co.uk: ";
+
+  // Construct the email URL
+  var mailtoLink = "mailto:" + email + "?subject=" + encodeURIComponent(subject);
+
+  // Open the user's default email client
+  window.location.href = mailtoLink;
+}
+
 class Order {
     constructor(vendorID, number, time, total, description) {
       this.vendorID = vendorID;
