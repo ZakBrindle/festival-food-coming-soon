@@ -5,6 +5,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Add click event listener
     guestLoginButton.addEventListener('click', () => {
         // Redirect to the specified URL
-        window.location.href = './app/';
+        window.location.href = './coming-soon.html';
     });
 });
