@@ -461,3 +461,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+// Create an Intersection Observer to watch for when the element comes into view
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    // If the element is in the viewport
+    if (entry.isIntersecting) {
+      // Add the 'bounce' class to start the animation
+      entry.target.classList.add('bounce');
+
+      // Remove the 'bounce' class after 2 seconds to stop the animation
+      setTimeout(() => {
+        entry.target.classList.remove('bounce');
+      }, 2000);
+
+      // Optionally, unobserve the element if you only want it to bounce once
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+// Target the label element
+const vendorLabel = document.querySelector("label[for='vendor-board-btn']");
+
+// Start observing the element
+observer.observe(vendorLabel);
+
+  });
