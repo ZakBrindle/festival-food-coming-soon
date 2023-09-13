@@ -432,3 +432,32 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   });
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get the radio buttons
+    const vendorBoardBtn = document.getElementById("vendor-board-btn");
+    const festivalGoerBoardBtn = document.getElementById("festival-goer-board-btn");
+  
+    // Get the message boards
+    const boardMessageVendors = document.getElementById("board-message-vendors");
+    const boardMessageFestivalGoers = document.getElementById("board-message-festival-goers");
+  
+    // Initially hide the festival goers board and show vendors board
+    boardMessageVendors.style.display = "none";
+    boardMessageFestivalGoers.style.display = "block";
+  
+    // Listener for vendor board button
+    vendorBoardBtn.addEventListener("click", function() {
+      boardMessageVendors.style.display = "block";
+      boardMessageFestivalGoers.style.display = "none";
+    });
+  
+    // Listener for festival goer board button
+    festivalGoerBoardBtn.addEventListener("click", function() {
+      boardMessageVendors.style.display = "none";
+      boardMessageFestivalGoers.style.display = "block";
+    });
+  });
+  
